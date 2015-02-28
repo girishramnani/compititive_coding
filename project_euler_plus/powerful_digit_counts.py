@@ -9,4 +9,3 @@ for i in range(1,10):
     if int(math.log10(t2))+1 ==t:
         print(t2)
 
-
