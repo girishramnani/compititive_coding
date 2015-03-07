@@ -2,10 +2,10 @@ __author__ = 'Girish'
 
 #31.14 points due to recursion depth exceeding
 #pass if uncomment the line
-'''
+
 import sys
 sys.setrecursionlimit(10000)
-'''
+
 class node:
 	def __init__(self,data=None):
 		self.left =None
