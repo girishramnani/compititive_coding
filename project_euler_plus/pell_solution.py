@@ -70,5 +70,8 @@ def fractionalcoll(num):
         #y              #x
     return denominator
 
+t = int(input())
+print(max([i for i in range(2,t+1)],key=fractionalcoll))
 
-print(fractionalcoll(math.pi))
+
+
