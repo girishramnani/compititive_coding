@@ -2,7 +2,6 @@ __author__ = 'Girish'
 import math
 
 def pell_coefficient(num):
-
     sq = int(math.sqrt(num))
     if num ==sq**2:
         return -1
