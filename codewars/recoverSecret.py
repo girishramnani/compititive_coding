@@ -34,9 +34,6 @@ def recoverSecret(triplets):
 
 
 
-
-
-
 'w h a t i s u p'
 secret = "whatisup"
 triplets = [
