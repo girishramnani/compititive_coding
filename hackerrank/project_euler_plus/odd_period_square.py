@@ -2,9 +2,11 @@ __author__ = 'Girish'
 import math
 
 def pell_coefficient(num):
+    #if its a perfect square then ans not possible
     sq = int(math.sqrt(num))
     if num ==sq**2:
         return -1
+    #algorithm from wikipedia (pells equation)
     m0=0
     m1=0
     d0=1
@@ -25,10 +27,9 @@ def pell_coefficient(num):
     return li
 
 ans=0
-
-for i in range(2,int(input())+1):
-    if (pell_coefficient(i)-1) & 1 :
-        ans+=1
+#finding the max value for i
+for i in range(2,100):
+    print(pell_coefficient(i))
 
 print(ans)
 
