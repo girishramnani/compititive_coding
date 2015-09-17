@@ -1,28 +1,39 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-bool check_for_seven(string data,int a){
-    int count =0;
-    for(int i=0;i<data.length();i++){
-        if((data[i]-'0')==a){
-            count++;
-            if(count==7){
-                return true;
-            }
+bool comp(int a,int b)
+{
+    return (a>b);
+}
+int gcd(long long int a,long long int b)
+{
+    if(b==0)
+        return a;
+    else
+        return gcd(b,a%b);
+}
+int main(void) {
+    int n,m;
+    cin>>n>>m;
+    int a,i,j;
+    bool b[1001]={0},t[1001];
+    for(i=0;i<n;++i)
+    {
+        cin>>a;
+        a=a%m;
+        for(j=0;j<m;++j)
+            t[j]=b[j];
+        for(j=0;j<m;++j)
+        {
+            if(t[j])
+                b[(j+a)%m]=1;
         }
-        else{
-            count=0;
+        b[a]=1;
+        if(b[0])
+        {
+            cout<<"YES";
+            return 0;
         }
     }
-    return false;
-}
-
-int main() {
-    string data;
-    cin >> data;
-
-    string d = (check_for_seven(data,1) || check_for_seven(data,0)) ? "YES" : "NO";
-    cout << d;
-
+    cout<<"NO";
+    return 0;
 }
