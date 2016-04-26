@@ -4,3 +4,5 @@
 
 
 solutions to coding contest in a cleaner way . The each package has a __init__ which has the information about the contest.The answers are mostly in python and if the answer was partially accepted that would be only because of the slow speed of python which on my local machine I would try to speed up using numpy ,numba ,cython and pypy.
+
+For better understanding , i will be adding comments to all the solutions solved **2016** +.
